@@ -2,14 +2,18 @@
 
 
 .frame {
-    max-width: 6rem;
-    border-radius: map-get($radius, full);
+    width: 6rem;
+    
     @media (max-width: 800px) {
         max-width: 4rem;
     }
+    border-radius: map-get($radius, full);
+    
 }
 
 .avatar {
     max-width: 100%;
+    
+    
     border-radius: inherit;
 }

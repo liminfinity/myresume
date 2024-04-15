@@ -26,9 +26,10 @@ html {
 body {
     font-family: map-get($fontFamilies, inter), sans-serif;
     color: map-get($colors, primaryText);
-    background: #FFEFBA; 
-    background: -webkit-linear-gradient(to right, #ffefba86, #FFEFBA);
-    background: linear-gradient(to right, #ffefba86, #FFEFBA);
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c9d6ff7d, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c9d6ff7d, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 
