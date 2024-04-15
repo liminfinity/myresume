@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProfileCard from '../modules/profileCard'
 import About from '../modules/about'
 import Experience from '../modules/experience'

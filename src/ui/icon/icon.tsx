@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { IDefaultProps } from '../../types/components'
 import styles from './style.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

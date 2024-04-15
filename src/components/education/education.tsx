@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { IDefaultProps } from '../../types/components'
 import Title from '../../ui/title'
 import { IEducation } from '../../types/entities'

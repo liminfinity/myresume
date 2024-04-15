@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Article from '../../ui/article'
 import { IEducation } from '../../types/entities'
 import Education from '../../components/education'
