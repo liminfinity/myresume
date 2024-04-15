@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+
 interface IProject {
     name: string,
     stack: string[],
@@ -8,7 +10,7 @@ interface IProject {
 interface IContact {
     title: string,
     contact: string,
-    svg: string
+    icon: IconDefinition
 }
 
 interface ISkill {

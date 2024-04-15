@@ -3,7 +3,7 @@ import Article from '../../ui/article'
 import { IProject } from '../../types/entities'
 import Project from '../../components/project'
 import {v4 as uuid} from 'uuid'
-
+import styles from './style.module.scss'
 
 const projects: (IProject & {id: string})[] = [
     {
@@ -46,7 +46,13 @@ const projects: (IProject & {id: string})[] = [
 export default function Experience() {
   return (
     <Article title='Мои проекты'>
-        {projects.map(project => <Project key={project.id} {...project}/>)}
+        <ul className={styles.experience}>
+            {projects.map(project => {
+                return <li>
+                            <Project key={project.id} {...project}/>
+                        </li>
+            })}
+        </ul>
     </Article>
   )
 }

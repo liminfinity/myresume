@@ -1,0 +1,23 @@
+@import '../../style/variables', '../../style/mixins';
+
+.project {
+    @include flex(column) {
+        gap: .7rem;
+    }
+}
+.expContainer {
+    @include flex(column) {
+        gap: .5rem;
+    }
+}
+.content {
+    padding-left: 1rem;
+    @include flex(column) {
+        gap: .5rem;
+    }
+}
+
+.experience {
+    list-style: decimal;
+    padding-left: 2rem;
+}

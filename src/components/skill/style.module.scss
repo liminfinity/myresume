@@ -1,0 +1,9 @@
+@import "../../style/variables", "../../style/functions";
+
+@each $skill, $color in $skills {
+    .#{$skill} {
+        & meter::-webkit-meter-optimum-value {
+            background: $color;
+        }
+    }
+}

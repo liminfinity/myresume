@@ -1,0 +1,3 @@
+@function skillCSSFormat($skill) {
+    @return str-replace(to-lower-case($skill), '.', '')
+}

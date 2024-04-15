@@ -1,0 +1,21 @@
+@import '../../style/variables', '../../style/mixins';
+
+.card {
+    @include flex {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.content {
+    @include flex(column) {
+        gap: .5rem;
+    }
+}
+
+
+
+.link {
+    font-size: map-get($fontSizes, h4);
+}

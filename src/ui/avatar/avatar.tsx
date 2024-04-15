@@ -1,5 +1,6 @@
 import React from 'react'
 import { IDefaultProps } from '../../types/components'
+import styles from './style.module.scss'
 
 interface IAvatarProps extends IDefaultProps {
     src: string,
@@ -8,6 +9,8 @@ interface IAvatarProps extends IDefaultProps {
 
 export default function Avatar({src, alt}: IAvatarProps) {
   return (
-    <img src={src} alt={alt} />
+    <div className={styles.frame}>
+      <img className={styles.avatar} src={src} alt={alt} />
+    </div>
   )
 }

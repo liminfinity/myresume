@@ -1,0 +1,21 @@
+@mixin flex($dir: row) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: $dir;
+    gap: 2rem;
+    @content;
+}
+
+@mixin container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-inline: 1rem; 
+}
+
+@mixin grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    @content;
+}

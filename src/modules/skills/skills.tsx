@@ -3,7 +3,8 @@ import Article from '../../ui/article'
 import Skill from '../../components/skill'
 import { ISkill } from '../../types/entities'
 import {v4 as uuid} from 'uuid'
-
+import { IDefaultProps } from '../../types/components'
+import styles from './style.module.scss'
 
 const skills: (ISkill & {id: string})[] = [
     {
@@ -54,10 +55,17 @@ const skills: (ISkill & {id: string})[] = [
 
 ]
 
-export default function Skills() {
+export default function Skills({className}: IDefaultProps) {
   return (
-    <Article title='Навыки'>
-        {skills.map(skill => <Skill key={skill.id} {...skill}/>)}
+    <Article className={className} title='Навыки'>
+        <ul className={styles.skills}>
+            {skills.map(skill => {
+                return <li>
+                            <Skill key={skill.id} {...skill}/>
+                        </li>
+            })}
+        </ul>
+        
     </Article>
   )
 }

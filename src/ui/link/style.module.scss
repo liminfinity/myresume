@@ -1,0 +1,8 @@
+@import '../../style/variables', '../../style/mixins';
+
+.link {
+    transition: .3s;
+    &:hover {
+        color: map-get($skills, react);
+    }
+}

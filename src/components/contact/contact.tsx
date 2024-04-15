@@ -3,16 +3,21 @@ import { IDefaultProps } from '../../types/components'
 import Title from '../../ui/title'
 import Icon from '../../ui/icon'
 import { IContact } from '../../types/entities'
-
+import styles from './style.module.scss'
+import Link from '../../ui/link/link'
 interface IContactProps extends IContact, IDefaultProps {}
 
-export default function Contact({title, contact, svg}: IContactProps) {
+export default function Contact({title, contact, icon}: IContactProps) {
   return (
-    <article>
-        <Icon src={svg}/>
-        <address>
-            <Title level={4}>{title}</Title>
-            {/^https?:\/\/.+/.test(contact) ? <a href={contact}>{contact}</a> : <span>{contact}</span>}
+    <article className={styles.card}>
+        <Icon icon={icon}/>
+        <address className={styles.content}>
+            {/^https?:\/\/.+/.test(contact) ? <Link className={styles.link} href={contact}>{title}</Link> : (
+              <>
+                <Title level={4}>{title}</Title>
+                <span>{contact}</span>
+              </>
+            )}
         </address>
     </article>
   )

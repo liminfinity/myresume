@@ -1,0 +1,40 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    font-size: 18px;
+    @media (max-width: 650px) {
+        font-size: 16px;
+    }
+}
+body {
+    font-family: map-get($fontFamilies, inter), sans-serif;
+    color: map-get($colors, primaryText);
+    background: #FFEFBA; 
+    background: -webkit-linear-gradient(to right, #ffefba86, #FFEFBA);
+    background: linear-gradient(to right, #ffefba86, #FFEFBA);
+
+}
+
+@each $header, $size in $fontSizes {
+    #{$header} {
+        font-size: $size;
+    }
+}
+

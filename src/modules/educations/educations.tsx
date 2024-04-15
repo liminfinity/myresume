@@ -18,7 +18,13 @@ const educations: (IEducation & {id: string})[] = [
 export default function Educations() {
   return (
     <Article title='Образование'>
-        {educations.map(education => <Education key={education.id} {...education}/>)}
+        <ul>
+          {educations.map(education => {
+            return <li>
+                    <Education key={education.id} {...education}/>
+                  </li>
+          })}
+        </ul>
     </Article>
   )
 }

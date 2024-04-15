@@ -1,0 +1,15 @@
+@import '../../style/variables';
+
+
+.frame {
+    max-width: 6rem;
+    border-radius: map-get($radius, full);
+    @media (max-width: 800px) {
+        max-width: 4rem;
+    }
+}
+
+.avatar {
+    max-width: 100%;
+    border-radius: inherit;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { IDefaultProps } from '../../types/components'
+import styles from './style.module.scss'
 
 interface IProgressProps extends IDefaultProps {
     min?: number,
@@ -9,6 +10,6 @@ interface IProgressProps extends IDefaultProps {
 
 export default function Progress({min = 1, max = 10, value = 5}: IProgressProps) {
   return (
-    <meter min={min} max={max} value={value}></meter>
+    <meter className={styles.progress} min={min} max={max} value={value}></meter>
   )
 }
