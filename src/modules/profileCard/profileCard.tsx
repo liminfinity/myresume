@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Title from '../../ui/title'
 import Avatar from '../../ui/avatar'
 import styles from './style.module.scss'

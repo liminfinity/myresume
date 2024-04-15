@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Article from '../../ui/article'
 import Skill from '../../components/skill'
 import { ISkill } from '../../types/entities'

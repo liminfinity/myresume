@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Article from '../../ui/article'
 import Contact from '../../components/contact'
 import { IContact } from '../../types/entities'

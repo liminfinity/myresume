@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Article from '../../ui/article'
 import { IProject } from '../../types/entities'
 import Project from '../../components/project'
