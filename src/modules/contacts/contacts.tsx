@@ -22,7 +22,7 @@ const contacts: (IContact & {id: string})[] = [
     {
       id: uuid(),
       title: 'Почта',
-      contact: 'poleshko.artem04@gmail.com' ,
+      contact: 'poleshko.artyom04@gmail.com' ,
       icon: faEnvelope
     },
     {
