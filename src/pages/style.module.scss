@@ -22,7 +22,7 @@
     @include container;
 
     @media print {
-        padding: initial;
+        padding-bottom: initial;;
     }
 }
 .card {
