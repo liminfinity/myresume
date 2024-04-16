@@ -2,8 +2,20 @@
 
 @each $skill, $color in $skills {
     .#{$skill} {
+        & h4 {
+            @media print {
+                &::after {
+                    content: ',';
+                }
+            }
+        }
         & meter::-webkit-meter-optimum-value {
             background: $color;
+        }
+        & meter {
+            @media print {
+                display: none;
+            }
         }
     }
 }

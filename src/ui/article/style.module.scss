@@ -10,6 +10,9 @@
     @media (max-width: 600px) {
         padding: 1.5rem;
     }
+    @media print {
+        padding: initial;
+    }
 }
 
 .text {
