@@ -20,6 +20,10 @@
                             "details details";
     }
     @include container;
+
+    @media print {
+        padding: initial;
+    }
 }
 .card {
     grid-area: card;
