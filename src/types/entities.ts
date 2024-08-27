@@ -3,7 +3,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 interface IProject {
   name: string;
   stack: string[];
-  experience: string[];
   link: string;
 }
 

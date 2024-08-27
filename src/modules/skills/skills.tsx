@@ -7,39 +7,43 @@ import styles from './style.module.scss';
 const skills: ISkill[] = [
   {
     name: 'JavaScript',
-    level: 9,
+    level: 10,
   },
   {
     name: 'TypeScript',
-    level: 8,
+    level: 9,
   },
   {
     name: 'React',
-    level: 8,
+    level: 9,
   },
   {
     name: 'Redux',
-    level: 7,
+    level: 9,
   },
   {
-    name: 'Webpack',
-    level: 6,
+    name: 'Next.js',
+    level: 7,
   },
   {
     name: 'Node.js',
     level: 8,
   },
   {
-    name: 'CSS3',
-    level: 9,
+    name: 'NestJS',
+    level: 8,
   },
   {
     name: 'HTML5',
     level: 10,
   },
   {
+    name: 'CSS3',
+    level: 10,
+  },
+  {
     name: 'Git',
-    level: 6,
+    level: 8,
   },
 ];
 

@@ -31,9 +31,9 @@ const contacts: IContact[] = [
     icon: faCode,
   },
   {
-    title: 'Codewars',
-    contact: 'https://www.codewars.com/users/liminfinity',
-    icon: faCode,
+    title: 'VK',
+    contact: 'https://vk.com/poleshkoas',
+    icon: faEnvelope,
   },
 ];
 
