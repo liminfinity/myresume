@@ -1,35 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 $colors: (
-    primaryText: #000,
-    secondaryText: #555555bd,
-    bgIcon: #c1bebe,
-    gradient: #a4baff
+  primaryText: #000,
+  secondaryText: #555555bd,
+  bgIcon: #c1bebe,
+  gradient: #a4baff,
 );
 
 $skills: (
-    javascript: #f6dc3c,
-    typescript: #1570ad,
-    react: #1884ac,
-    redux: #764abc,
-    nodejs: #417e38,
-    webpack: #75afcc,
-    html5: #e34c26,
-    css3: #285ddb,
-    git: #f64d27
-); 
+  javascript: #f6dc3c,
+  typescript: #1570ad,
+  react: #1884ac,
+  redux: #764abc,
+  nodejs: #417e38,
+  webpack: #75afcc,
+  html5: #e34c26,
+  css3: #285ddb,
+  git: #f64d27,
+);
 
 $fontFamilies: (
-    inter: 'Inter',
+  inter: 'Inter',
 );
 
 $fontSizes: (
-    h1: 1rem * 1.7,
-    h2: 1rem * 1.5,
-    h3: 1rem * 1.3,
-    h4: 1rem * 1.1
+  h1: 1rem * 1.7,
+  h2: 1rem * 1.5,
+  h3: 1rem * 1.3,
+  h4: 1rem * 1.1,
 );
 
 $radius: (
-    full: 20rem,
-    lg: 3rem
-)
+  full: 20rem,
+  lg: 3rem,
+);

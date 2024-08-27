@@ -1,18 +1,14 @@
+import type { ArticleProps } from './article.types';
 
-import { IDefaultProps } from '../../types/components'
+import { Title } from '../title';
+import styles from './style.module.scss';
+import { cn } from '../../lib';
 
-import Title from '../title/title'
-import styles from './style.module.scss'
-
-interface IArticleProps extends IDefaultProps {
-    title: string
-}
-
-export default function Article({title, children, className = ''}: IArticleProps) {
+export const Article = ({ title, children, className, ...props }: ArticleProps) => {
   return (
-    <article className={styles.article + ` ${className}`}>
-        <Title level={2}>{title}</Title>
-        <div className={styles.text}>{children}</div>
+    <article className={cn(styles.article, className)} {...props}>
+      <Title level={2}>{title}</Title>
+      <div className={styles.text}>{children}</div>
     </article>
-  )
-}
+  );
+};

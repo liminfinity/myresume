@@ -1,12 +1,11 @@
 @import '../../style/variables', '../../style/mixins';
 
 .skills {
-    @include flex(column) {
-        gap: .5rem;
-        align-items: stretch;
-        
-    }
-    @media print {
-        flex-direction: row;
-    }
+  @include flex(column) {
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  @media print {
+    flex-direction: row;
+  }
 }

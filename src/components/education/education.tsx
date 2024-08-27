@@ -1,19 +1,22 @@
+import { cn } from '../../lib';
+import { Title } from '../../ui';
+import { EducationProps } from './education.types';
+import styles from './style.module.scss';
 
-import { IDefaultProps } from '../../types/components'
-import Title from '../../ui/title'
-import { IEducation } from '../../types/entities'
-import styles from './style.module.scss'
-
-interface IEducationProps extends IEducation, IDefaultProps {}
-
-export default function Education({university, speciality, yearEnding}: IEducationProps) {
+export const Education = ({
+  university,
+  speciality,
+  yearEnding,
+  className,
+  ...props
+}: EducationProps) => {
   return (
-    <article className={styles.education}>
-        <Title level={3}>{university}</Title>
-        <div className={styles.content}>
-          <p>{`Специальность: ${speciality}`}</p>
-          <p>{`Год окончания: ${yearEnding}`}</p>
-        </div>
+    <article className={cn(styles.education, className)} {...props}>
+      <Title level={3}>{university}</Title>
+      <div className={styles.content}>
+        <p>{`Специальность: ${speciality}`}</p>
+        <p>{`Год окончания: ${yearEnding}`}</p>
+      </div>
     </article>
-  )
-}
+  );
+};

@@ -1,1 +1,1 @@
-export {default} from "./education"
+export { Education } from './education';

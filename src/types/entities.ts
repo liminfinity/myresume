@@ -1,28 +1,27 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 interface IProject {
-    name: string,
-    stack: string[],
-    experience: string[],
-    link: string
+  name: string;
+  stack: string[];
+  experience: string[];
+  link: string;
 }
 
 interface IContact {
-    title: string,
-    contact: string,
-    icon: IconDefinition
+  title: string;
+  contact: string;
+  icon: IconDefinition;
 }
 
 interface ISkill {
-    name: string,
-    level: number
+  name: string;
+  level: number;
 }
 
 interface IEducation {
-    university: string,
-    speciality: string,
-    yearEnding: number
+  university: string;
+  speciality: string;
+  yearEnding: number;
 }
 
-
-export type {IProject, IContact, ISkill, IEducation}
+export type { IProject, IContact, ISkill, IEducation };

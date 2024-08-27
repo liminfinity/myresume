@@ -1,62 +1,64 @@
 @import '../style/variables', '../style/mixins';
 
 .container {
-    @include container;
+  @include container;
 }
 
 .main {
-    @include grid {
-        grid-template-areas: "card card"
-                            "main details";
-        gap: 2rem;
-        padding-block: 3rem;
-    }
-    @media (max-width: 950px) {
-        gap: 1rem;
-    }
-    @media (max-width: 800px) {
-        grid-template-areas: "card card"
-                            "main main"
-                            "details details";
-    }
-    @include container;
+  @include grid {
+    grid-template-areas:
+      'card card'
+      'main details';
+    gap: 2rem;
+    padding-block: 3rem;
+  }
+  @media (max-width: 950px) {
+    gap: 1rem;
+  }
+  @media (max-width: 800px) {
+    grid-template-areas:
+      'card card'
+      'main main'
+      'details details';
+  }
+  @include container;
 
-    @media print {
-        padding-bottom: initial;;
-    }
+  @media print {
+    padding-bottom: initial;
+  }
 }
 .card {
-    grid-area: card;
+  grid-area: card;
 }
 .about {
-    grid-area: main;
-    align-self: flex-start;
-    @include flex(column) {
-        gap: 2rem;
-    };
+  grid-area: main;
+  align-self: flex-start;
+  @include flex(column) {
+    gap: 2rem;
+  }
 }
 .details {
-    position: sticky;
-    top: 1rem;
-    grid-area: details;
-    align-self: flex-start;
-    @include flex(column);
-    @media (max-width: 800px) {
-        position: initial;
-    }
+  position: sticky;
+  top: 1rem;
+  grid-area: details;
+  align-self: flex-start;
+  @include flex(column);
+  @media (max-width: 800px) {
+    position: initial;
+  }
 }
 .skills {
-    width: 20rem;
-    padding: 2rem;
-    background: #fff;
-    border-radius: map-get($radius, lg);
-    @media (max-width: 800px) {
-        width: 100%;
-    }
+  width: 20rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: map-get($radius, lg);
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 }
 
 .footer {
-    background: #fff;
-    border-top-left-radius: map-get($radius, lg);
-    border-top-right-radius: map-get($radius, lg);
+  background: #fff;
+  border-top-left-radius: map-get($radius, lg);
+  border-top-right-radius: map-get($radius, lg);
 }

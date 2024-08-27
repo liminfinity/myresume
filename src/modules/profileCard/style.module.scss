@@ -1,22 +1,20 @@
 @import '../../style/variables', '../../style/mixins';
 
 .card {
-    @include flex {
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1.5rem;
-    }
+  @include flex {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 
 .content {
-    @include flex(column) {
-        gap: .5rem;
-    }
+  @include flex(column) {
+    gap: 0.5rem;
+  }
 }
 
 .age {
-    text-wrap: nowrap;
-    color: map-get($colors, secondaryText);
+  text-wrap: nowrap;
+  color: map-get($colors, secondaryText);
 }
-
-
