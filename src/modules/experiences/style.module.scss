@@ -1,0 +1,9 @@
+@import '../../style/variables', '../../style/mixins';
+
+.experiences {
+  @include flex($dir: column) {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}

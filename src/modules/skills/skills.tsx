@@ -53,7 +53,7 @@ export const Skills = ({ className }: DefaultProps) => {
       <ul className={styles.skills}>
         {skills.map((skill, idx) => (
           <li>
-            <Skill key={idx} {...skill} />
+            <Skill skill={skill} key={idx} />
           </li>
         ))}
       </ul>

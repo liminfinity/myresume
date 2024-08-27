@@ -1,26 +1,32 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-interface IProject {
+export interface IProject {
   name: string;
   stack: string[];
   link: string;
 }
 
-interface IContact {
+export interface IContact {
   title: string;
-  contact: string;
+  source: string;
   icon: IconDefinition;
 }
 
-interface ISkill {
+export interface ISkill {
   name: string;
   level: number;
 }
 
-interface IEducation {
+export interface IEducation {
   university: string;
   speciality: string;
   yearEnding: number;
 }
 
-export type { IProject, IContact, ISkill, IEducation };
+export interface IExperience {
+  startingDate: string;
+  endingDate: string;
+  position: string;
+  company: string;
+  task: string;
+}

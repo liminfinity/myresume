@@ -2,6 +2,7 @@ import { Article } from '../../ui';
 import { IProject } from '../../types/entities';
 import { Project } from '../../components';
 import styles from './style.module.scss';
+import { ProjectsProps } from './projects.types';
 
 const projects: IProject[] = [
   {
@@ -26,13 +27,13 @@ const projects: IProject[] = [
   },
 ];
 
-export const Projects = () => {
+export const Projects = ({ className }: ProjectsProps) => {
   return (
-    <Article title="Мои проекты">
+    <Article title="Мои проекты" className={className}>
       <ul className={styles.experience}>
         {projects.map((project, idx) => (
           <li>
-            <Project key={idx} {...project} />
+            <Project project={project} key={idx} />
           </li>
         ))}
       </ul>

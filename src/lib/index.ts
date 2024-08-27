@@ -1,2 +1,2 @@
 export { cn } from './cn';
-export { isContactLink } from './isContactLink';
+export { isSourceLink } from './isSourceLink';

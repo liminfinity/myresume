@@ -4,12 +4,11 @@ import { EducationProps } from './education.types';
 import styles from './style.module.scss';
 
 export const Education = ({
-  university,
-  speciality,
-  yearEnding,
+  education,
   className,
   ...props
 }: EducationProps) => {
+  const { university, speciality, yearEnding } = education;
   return (
     <article className={cn(styles.education, className)} {...props}>
       <Title level={3}>{university}</Title>

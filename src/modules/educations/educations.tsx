@@ -1,6 +1,7 @@
 import { Article } from '../../ui';
 import { IEducation } from '../../types/entities';
 import { Education } from '../../components';
+import { EducationsProps } from './educations.types';
 
 const educations: IEducation[] = [
   {
@@ -11,13 +12,13 @@ const educations: IEducation[] = [
   },
 ];
 
-export const Educations = () => {
+export const Educations = ({className}: EducationsProps) => {
   return (
-    <Article title="Образование">
+    <Article title="Образование" className={className}>
       <ul>
         {educations.map((education, idx) => (
           <li>
-            <Education key={idx} {...education} />
+            <Education education={education} key={idx} />
           </li>
         ))}
       </ul>

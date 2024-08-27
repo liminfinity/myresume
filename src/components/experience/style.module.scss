@@ -1,0 +1,14 @@
+@import '../../style/variables', '../../style/mixins';
+
+.experience {
+  @include flex($dir: column) {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
+.dates {
+  color: map-get($colors, secondaryText);
+}
+

@@ -1,4 +1,6 @@
 import type { HTMLAttributes } from 'react';
 import { IEducation } from '../../types';
 
-export type EducationProps = IEducation & HTMLAttributes<HTMLElement>;
+export type EducationProps = HTMLAttributes<HTMLElement> & {
+  education: IEducation;
+};

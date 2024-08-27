@@ -3,47 +3,48 @@ import { Contact } from '../../components';
 import type { IContact } from '../../types';
 import { faCode, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import styles from './style.module.scss';
+import type { ContactsProps } from './contacts.types';
 
 const contacts: IContact[] = [
   {
     title: 'Город',
-    contact: 'Краснояск',
+    source: 'Краснояск',
     icon: faLocationDot,
   },
   {
     title: 'Телефон',
-    contact: '+7 913 557 70 11',
+    source: '+7 913 557 70 11',
     icon: faPhone,
   },
   {
     title: 'Почта',
-    contact: 'poleshko.artyom04@gmail.com',
+    source: 'poleshko.artyom04@gmail.com',
     icon: faEnvelope,
   },
   {
     title: 'Telegram',
-    contact: 'https://t.me/liminfinity',
+    source: 'https://t.me/liminfinity',
     icon: faEnvelope,
   },
   {
     title: 'Github',
-    contact: 'https://github.com/liminfinity',
+    source: 'https://github.com/liminfinity',
     icon: faCode,
   },
   {
     title: 'VK',
-    contact: 'https://vk.com/poleshkoas',
+    source: 'https://vk.com/poleshkoas',
     icon: faEnvelope,
   },
 ];
 
-export const Contacts = () => {
+export const Contacts = ({ className }: ContactsProps) => {
   return (
-    <Article title="Контактная информация">
+    <Article title="Контактная информация" className={className}>
       <ul className={styles.contacts}>
         {contacts.map((contact, idx) => (
           <li>
-            <Contact key={idx} {...contact} />
+            <Contact contact={contact} key={idx} />
           </li>
         ))}
       </ul>

@@ -3,7 +3,8 @@ import styles from './style.module.scss';
 import type { ProjectProps } from './project.types';
 import { cn } from '../../lib';
 
-export const Project = ({ name, stack, link, className, ...props }: ProjectProps) => {
+export const Project = ({ project, className, ...props }: ProjectProps) => {
+  const { name, stack, link } = project;
   return (
     <article className={cn(styles.project, className)} {...props}>
       <Title level={3}>{name}</Title>
