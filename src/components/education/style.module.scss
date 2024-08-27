@@ -1,14 +1,14 @@
 @import '../../style/variables', '../../style/mixins';
 
 .education {
-    @include flex(column) {
-        gap: .7rem;
-    }
+  @include flex(column) {
+    gap: 0.7rem;
+  }
 }
 
 .content {
-    padding-left: 1rem;
-    @include flex(column) {
-        gap: .5rem;
-    }
+  padding-left: 1rem;
+  @include flex(column) {
+    gap: 0.5rem;
+  }
 }

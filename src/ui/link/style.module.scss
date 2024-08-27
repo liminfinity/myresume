@@ -1,8 +1,8 @@
 @import '../../style/variables', '../../style/mixins';
 
 .link {
-    transition: .3s;
-    &:hover {
-        color: map-get($colors, gradient);
-    }
+  transition: 0.3s;
+  &:hover {
+    color: map-get($colors, gradient);
+  }
 }

@@ -1,16 +1,11 @@
+import { cn } from '../../lib';
+import type { AvatarProps } from './avatar.types';
+import styles from './style.module.scss';
 
-import { IDefaultProps } from '../../types/components'
-import styles from './style.module.scss'
-
-interface IAvatarProps extends IDefaultProps {
-    src: string,
-    alt: string
-}
-
-export default function Avatar({src, alt}: IAvatarProps) {
+export const Avatar = ({ className, ...props }: AvatarProps) => {
   return (
-    <div className={styles.frame}>
-      <img className={styles.avatar} src={src} alt={alt} />
+    <div className={cn(styles.container, className)}>
+      <img className={styles.avatar} {...props} />
     </div>
-  )
-}
+  );
+};

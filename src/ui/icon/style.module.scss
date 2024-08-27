@@ -1,18 +1,17 @@
 @import '../../style/variables', '../../style/mixins';
 
-.frame {
-    max-width: 2rem;
-    max-height: 2rem;
-    padding: 1.3rem;
-    @include flex {
-        align-items: center;
-    }
-    border-radius: map-get($radius, full);
-    background: map-get($colors, bgIcon);
-    
+.container {
+  max-width: 2rem;
+  max-height: 2rem;
+  padding: 1.3rem;
+  @include flex {
+    align-items: center;
+  }
+  border-radius: map-get($radius, full);
+  background: map-get($colors, bgIcon);
 }
 
 .icon {
-    max-width: 100%;
-    border-radius: inherit;
+  max-width: 100%;
+  border-radius: inherit;
 }

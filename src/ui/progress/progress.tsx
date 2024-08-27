@@ -1,15 +1,9 @@
+import { cn } from '../../lib';
+import type { ProgressProps } from './progress.types';
+import styles from './style.module.scss';
 
-import { IDefaultProps } from '../../types/components'
-import styles from './style.module.scss'
-
-interface IProgressProps extends IDefaultProps {
-    min?: number,
-    max?: number,
-    value?: number
-}
-
-export default function Progress({min = 1, max = 10, value = 5}: IProgressProps) {
+export const Progress = ({ min = 1, max = 10, value = 5, className }: ProgressProps) => {
   return (
-    <meter className={styles.progress} min={min} max={max} value={value}></meter>
-  )
-}
+    <meter className={cn(styles.progress, className)} min={min} max={max} value={value}></meter>
+  );
+};

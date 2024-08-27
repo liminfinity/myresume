@@ -1,15 +1,7 @@
+import { cn } from '../../lib';
+import type { LinkProps } from './link.types';
+import styles from './style.module.scss';
 
-import { IDefaultProps } from '../../types/components'
-import styles from './style.module.scss'
-
-interface ILinkProps extends IDefaultProps {
-    href: string,
-    title?: string
-
-}
-
-export default function Link({href, children, className = '', title = ''}: ILinkProps) {
-  return (
-    <a className={styles.link + ` ${className}`} title={title} href={href}>{children}</a>
-  )
-}
+export const Link = ({ className, ...props }: LinkProps) => {
+  return <a className={cn(styles.link, className)} {...props} />;
+};

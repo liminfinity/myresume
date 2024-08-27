@@ -1,17 +1,16 @@
+import { Avatar, Title } from '../../ui';
+import styles from './style.module.scss';
 
-import Title from '../../ui/title'
-import Avatar from '../../ui/avatar'
-import styles from './style.module.scss'
-export default function ProfileCard() {
+export const ProfileCard = () => {
   return (
     <article className={styles.card}>
-        <Avatar src="./avatar.jpg" alt="Моя фотография. На ней изображен мужчина 20 лет"/>
-        <div className={styles.content}>
-            <Title level={1}>
-                Артём Полешко <span className={styles.age}>20 лет</span>
-            </Title>
-            <Title level={4}>Frontend разработчик</Title>
-        </div>
+      <Avatar src="./avatar.jpg" alt="Фотография автора. На ней изображен мужчина 20 лет" />
+      <div className={styles.content}>
+        <Title level={1}>
+          Артём Полешко <span className={styles.age}>20 лет</span>
+        </Title>
+        <Title level={4}>Frontend разработчик</Title>
+      </div>
     </article>
-  )
-}
+  );
+};

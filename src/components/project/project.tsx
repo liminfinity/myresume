@@ -1,31 +1,22 @@
+import { Title, Link } from '../../ui';
+import styles from './style.module.scss';
+import type { ProjectProps } from './project.types';
+import { cn } from '../../lib';
 
-import { IDefaultProps } from '../../types/components'
-
-import Title from '../../ui/title'
-import { IProject } from '../../types/entities'
-import {v4 as uuid} from 'uuid'
-import styles from './style.module.scss'
-import Link from '../../ui/link'
-
-interface IProjectProps extends IProject, IDefaultProps {}
-
-export default function Project({name, stack, experience, link}: IProjectProps) {
+export const Project = ({ project, className, ...props }: ProjectProps) => {
+  const { name, stack, link } = project;
   return (
-    <article className={styles.project}>
-        <Title level={3}>{name}</Title>
-        <div className={styles.content}>
-          <p>{`Стек технологий: ${stack.join(', ')}`}</p>
-          <div className={styles.expContainer}>
-              <span>Полученный опыт:</span>
-              <ol className={styles.experience}>
-                  {experience.map(exp => <li key={uuid()}>{exp}</li>)}
-              </ol>
-          </div>
-          <div>
-              <span>Сссылка: </span>
-              <Link href={link} title='Ссылка на проект'>{link.substring(link.lastIndexOf('/') + 1)}</Link>
-          </div>
+    <article className={cn(styles.project, className)} {...props}>
+      <Title level={3}>{name}</Title>
+      <div className={styles.content}>
+        <p>{`Стек технологий: ${stack.join(', ')}`}</p>
+        <div>
+          <span>Сссылка: </span>
+          <Link href={link} title="Ссылка на проект">
+            {link.substring(link.lastIndexOf('/') + 1)}
+          </Link>
         </div>
+      </div>
     </article>
-  )
-}
+  );
+};

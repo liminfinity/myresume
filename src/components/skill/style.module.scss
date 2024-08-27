@@ -1,21 +1,21 @@
-@import "../../style/variables", "../../style/functions";
+@import '../../style/variables', '../../style/functions';
 
 @each $skill, $color in $skills {
-    .#{$skill} {
-        & h4 {
-            @media print {
-                &::after {
-                    content: ',';
-                }
-            }
+  .#{$skill} {
+    & h4 {
+      @media print {
+        &::after {
+          content: ',';
         }
-        & meter::-webkit-meter-optimum-value {
-            background: $color;
-        }
-        & meter {
-            @media print {
-                display: none;
-            }
-        }
+      }
     }
+    & meter::-webkit-meter-optimum-value {
+      background: $color;
+    }
+    & meter {
+      @media print {
+        display: none;
+      }
+    }
+  }
 }

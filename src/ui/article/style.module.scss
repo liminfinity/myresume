@@ -1,21 +1,21 @@
 @import '../../style/variables', '../../style/mixins';
 
 .article {
-    @include flex(column) {
-        gap: 1rem;
-    }
-    padding: 2rem;
-    background: #fff;
-    border-radius: map-get($radius, lg);
-    @media (max-width: 600px) {
-        padding: 1.5rem;
-    }
-    @media print {
-        padding: initial;
-    }
+  @include flex(column) {
+    gap: 1rem;
+  }
+  padding: 2rem;
+  background: #fff;
+  border-radius: map-get($radius, lg);
+  @media (max-width: 600px) {
+    padding: 1.5rem;
+  }
+  @media print {
+    padding: initial;
+  }
 }
 
 .text {
-    width: 100%;
-    text-align: justify;
+  width: 100%;
+  text-align: justify;
 }

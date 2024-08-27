@@ -1,23 +1,28 @@
-import { IDefaultProps } from '../../types/components'
-import Title from '../../ui/title'
-import Icon from '../../ui/icon'
-import { IContact } from '../../types/entities'
-import styles from './style.module.scss'
-import Link from '../../ui/link/link'
-interface IContactProps extends IContact, IDefaultProps {}
+import { cn, isSourceLink } from '../../lib';
+import { Title, Icon, Link } from '../../ui';
+import type { ContactProps } from './contact.types';
+import styles from './style.module.scss';
 
-export default function Contact({title, contact, icon}: IContactProps) {
+export const Contact = ({ contact, className, ...props }: ContactProps) => {
+  const {icon, source, title} = contact;
+  const isContactLink = isSourceLink(source);
+
   return (
-    <article className={styles.card}>
-        <Icon icon={icon}/>
-        <address className={styles.content}>
-            {/^https?:\/\/.+/.test(contact) ? <Link className={styles.link} href={contact}>{title}</Link> : (
-              <>
-                <Title level={4}>{title}</Title>
-                <span>{contact}</span>
-              </>
-            )}
-        </address>
+    <article className={cn(styles.card, className)} {...props}>
+      <Icon icon={icon} />
+      <address className={styles.content}>
+        {isContactLink && (
+          <Link className={styles.link} href={source}>
+            {title}
+          </Link>
+        )}
+        {!isContactLink && (
+          <>
+            <Title level={4}>{title}</Title>
+            <span>{source}</span>
+          </>
+        )}
+      </address>
     </article>
-  )
-}
+  );
+};

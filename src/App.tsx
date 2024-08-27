@@ -1,14 +1,12 @@
-
-import Resume from './pages/resume'
-import './style/globals.scss'
+import Resume from './pages/resume';
+import './style/globals.scss';
 
 function App() {
-
   return (
     <>
-      <Resume/>
+      <Resume />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

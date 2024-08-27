@@ -1,71 +1,62 @@
+import { Article } from '../../ui';
+import { Skill } from '../../components';
+import { ISkill } from '../../types/entities';
+import { DefaultProps } from '../../types';
+import styles from './style.module.scss';
 
-import Article from '../../ui/article'
-import Skill from '../../components/skill'
-import { ISkill } from '../../types/entities'
-import {v4 as uuid} from 'uuid'
-import { IDefaultProps } from '../../types/components'
-import styles from './style.module.scss'
+const skills: ISkill[] = [
+  {
+    name: 'JavaScript',
+    level: 10,
+  },
+  {
+    name: 'TypeScript',
+    level: 9,
+  },
+  {
+    name: 'React',
+    level: 9,
+  },
+  {
+    name: 'Redux',
+    level: 9,
+  },
+  {
+    name: 'Next.js',
+    level: 7,
+  },
+  {
+    name: 'Node.js',
+    level: 8,
+  },
+  {
+    name: 'NestJS',
+    level: 8,
+  },
+  {
+    name: 'HTML5',
+    level: 10,
+  },
+  {
+    name: 'CSS3',
+    level: 10,
+  },
+  {
+    name: 'Git',
+    level: 8,
+  },
+];
 
-const skills: (ISkill & {id: string})[] = [
-    {
-        id: uuid(),
-        name: "JavaScript",
-        level: 9 
-    },
-    {
-        id: uuid(),
-        name: "TypeScript",
-        level: 8 
-    },
-    {
-        id: uuid(),
-        name: "React",
-        level: 8 
-    },
-    {
-        id: uuid(),
-        name: "Redux",
-        level: 7 
-    },
-    {
-        id: uuid(),
-        name: "Webpack",
-        level: 6 
-    },
-    {
-        id: uuid(),
-        name: "Node.js",
-        level: 8 
-    },
-    {
-        id: uuid(),
-        name: "CSS3",
-        level: 9 
-    },
-    {
-        id: uuid(),
-        name: "HTML5",
-        level: 10 
-    },
-    {
-        id: uuid(),
-        name: "Git",
-        level: 6 
-    },
-
-]
-
-export default function Skills({className}: IDefaultProps) {
+export const Skills = ({ className }: DefaultProps) => {
   return (
-    <Article className={className} title='Навыки'>
-        <ul className={styles.skills}>
-            {skills.map(skill => {
-                return <li>
-                            <Skill key={skill.id} {...skill}/>
-                        </li>
-            })}
-        </ul>
-        
+    <Article className={className} title="Навыки">
+      <ul className={styles.skills}>
+        {skills.map((skill, idx) => (
+          <li>
+            <Skill skill={skill} key={idx} />
+          </li>
+        ))}
+      </ul>
     </Article>
-  )
-}
+  );
+};

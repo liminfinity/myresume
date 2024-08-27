@@ -1,16 +1,12 @@
+import { cn } from '../../lib';
+import { IconProps } from './icon.types';
+import styles from './style.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { IDefaultProps } from '../../types/components'
-import styles from './style.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
-interface IIconProps extends IDefaultProps {
-    icon: IconDefinition
-}
-
-export default function Icon({icon, className = ''}: IIconProps) {
+export const Icon = ({ icon, iconProps, className }: IconProps) => {
   return (
-    <div className={styles.frame + ` ${className}`}>
-       <FontAwesomeIcon icon={icon} color='#555555'/>
+    <div className={cn(styles.container, className)}>
+      <FontAwesomeIcon icon={icon} color="#555555" {...iconProps} />
     </div>
-  )
-}
+  );
+};
