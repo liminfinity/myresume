@@ -10,10 +10,10 @@ export default function Resume() {
             <ProfileCard />
           </section>
           <section className={styles.about}>
-            <About />
             <Experiences/>
             <Projects />
             <Educations />
+            <About />
           </section>
           <section className={styles.details}>
             <Skills className={styles.skills} />

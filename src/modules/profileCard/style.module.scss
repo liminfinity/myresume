@@ -17,4 +17,5 @@
 .age {
   text-wrap: nowrap;
   color: map-get($colors, secondaryText);
+  font-size: map-get($fontSizes, h3);
 }

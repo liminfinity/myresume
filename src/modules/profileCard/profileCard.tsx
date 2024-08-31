@@ -9,7 +9,7 @@ export const ProfileCard = () => {
         <Title level={1}>
           Артём Полешко <span className={styles.age}>20 лет</span>
         </Title>
-        <Title level={4}>Frontend разработчик</Title>
+        <Title level={2}>Frontend разработчик</Title>
       </div>
     </article>
   );

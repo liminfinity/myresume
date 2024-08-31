@@ -8,7 +8,7 @@ import type { ContactsProps } from './contacts.types';
 const contacts: IContact[] = [
   {
     title: 'Город',
-    source: 'Краснояск',
+    source: 'Красноярск',
     icon: faLocationDot,
   },
   {
