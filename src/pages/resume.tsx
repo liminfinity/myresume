@@ -1,4 +1,4 @@
-import { About, Projects, ProfileCard, Educations, Skills, Contacts, Experiences } from '../modules';
+import { About, Projects, ProfileCard, Educations, Skills, Contacts, Experiences, Languages } from '../modules';
 import styles from './style.module.scss';
 
 export default function Resume() {
@@ -17,6 +17,7 @@ export default function Resume() {
           </section>
           <section className={styles.details}>
             <Skills className={styles.skills} />
+            <Languages className={styles.languages} />
           </section>
         </div>
       </main>

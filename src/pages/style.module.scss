@@ -57,6 +57,15 @@
     width: 100%;
   }
 }
+.languages {
+  width: 20rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: map-get($radius, lg);
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+}
 
 .footer {
   background: #fff;
