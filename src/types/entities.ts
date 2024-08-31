@@ -28,5 +28,5 @@ export interface IExperience {
   endingDate: string;
   position: string;
   company: string;
-  task: string;
+  achievements: string[];
 }

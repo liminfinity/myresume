@@ -12,3 +12,21 @@
   color: map-get($colors, secondaryText);
 }
 
+.achievements {
+  @include flex($dir: column) {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
+.achievementList {
+  padding-inline-start: 1.5rem;
+  list-style: decimal;
+  @include flex($dir: column) {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
