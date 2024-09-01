@@ -1,6 +1,6 @@
 import { cn } from '../../lib';
 import type { ProgressProps } from './progress.types';
-import styles from './style.module.scss';
+import styles from './progress.module.scss';
 
 export const Progress = ({ min = 1, max = 10, value = 5, className }: ProgressProps) => {
   return (

@@ -1,7 +1,7 @@
 import { cn } from '../../lib';
 import { Title } from '../../ui';
 import type { ExperienceProps } from './experience.types';
-import styles from './style.module.scss';
+import styles from './experience.module.scss';
 
 export const Experience = ({ experience, className, ...props }: ExperienceProps) => {
 

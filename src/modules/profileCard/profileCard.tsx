@@ -1,5 +1,5 @@
 import { Avatar, Title } from '../../ui';
-import styles from './style.module.scss';
+import styles from './profileCard.module.scss';
 
 export const ProfileCard = () => {
   return (

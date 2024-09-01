@@ -2,7 +2,7 @@ import { Experience } from '../../components';
 import { IExperience } from '../../types';
 import { Article } from '../../ui';
 import type { ExperiencesProps } from './experiences.types';
-import styles from './style.module.scss';
+import styles from './experiences.module.scss';
 
 
 const experiences: IExperience[] = [
@@ -24,9 +24,9 @@ const experiences: IExperience[] = [
     startingDate: "Июнь 2024",
     endingDate: "Июль 2024",
     duties: [
-      "Разработал интерфейс в приложении для суммаризации видео с помощью ИИ для всего цикла аутентификации пользователя (авторизация, регистрация, восстановление пароля), а также для загрузки и управления созвонами на React;",
+      "Разработал интерфейс для аутентификации пользователя, а также для загрузки и управления созвонами в приложении для суммаризации видео на React;",
       "Настроил инфраструктуру проекта (eslint, stylelint, prettier, husky и др);",
-      "Перевел команду на fsd архитектуру."
+      "Перевел команду на FSD архитектуру."
     ]
   },
 ]

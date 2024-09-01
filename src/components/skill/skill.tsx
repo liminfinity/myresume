@@ -1,6 +1,6 @@
 import { Title, Progress } from '../../ui';
 import { formatToCSSVar } from './lib/format';
-import styles from './style.module.scss';
+import styles from './skill.module.scss';
 import type { SkillProps } from './skill.types';
 import { cn } from '../../lib';
 

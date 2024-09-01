@@ -1,7 +1,7 @@
 import { Article } from '../../ui';
 import { IProject } from '../../types/entities';
 import { Project } from '../../components';
-import styles from './style.module.scss';
+import styles from './projects.module.scss';
 import { ProjectsProps } from './projects.types';
 
 const projects: IProject[] = [

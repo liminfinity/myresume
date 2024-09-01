@@ -1,11 +1,9 @@
-import Resume from './pages/resume';
+import {Resume} from './pages/resume';
 import './style/globals.scss';
 
 function App() {
   return (
-    <>
-      <Resume />
-    </>
+    <Resume />
   );
 }
 

@@ -7,10 +7,10 @@ import {
   Contacts,
   Experiences,
   Languages,
-} from '../modules';
-import styles from './style.module.scss';
+} from '../../modules';
+import styles from './resume.module.scss';
 
-export default function Resume() {
+export const Resume = () => {
   return (
     <main className={styles.container}>
       <div className={styles.main}>

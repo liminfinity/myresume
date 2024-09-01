@@ -1,5 +1,5 @@
 import { Title, Link } from '../../ui';
-import styles from './style.module.scss';
+import styles from './project.module.scss';
 import type { ProjectProps } from './project.types';
 import { cn } from '../../lib';
 

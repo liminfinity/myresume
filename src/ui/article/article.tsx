@@ -1,7 +1,7 @@
 import type { ArticleProps } from './article.types';
 
 import { Title } from '../title';
-import styles from './style.module.scss';
+import styles from './article.module.scss';
 import { cn } from '../../lib';
 
 export const Article = ({ title, children, className, ...props }: ArticleProps) => {

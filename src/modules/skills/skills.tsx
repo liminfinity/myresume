@@ -2,7 +2,7 @@ import { Article } from '../../ui';
 import { Skill } from '../../components';
 import { ISkill } from '../../types/entities';
 import { DefaultProps } from '../../types';
-import styles from './style.module.scss';
+import styles from './skills.module.scss';
 
 const skills: ISkill[] = [
   {
