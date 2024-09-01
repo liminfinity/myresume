@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 
 export const Experience = ({ experience, className, ...props }: ExperienceProps) => {
 
-  const {company, position, achievements, startingDate, endingDate} = experience;
+  const {company, position, duties, startingDate, endingDate} = experience;
 
   return (
     <article className={cn(styles.experience, className)} {...props}>
@@ -13,10 +13,9 @@ export const Experience = ({ experience, className, ...props }: ExperienceProps)
       <span className={styles.dates}>{`${startingDate} - ${endingDate}`}</span>
       <b>{position}</b>
       <div className={styles.achievements}>
-        <b>Достижения</b>
         <ol className={styles.achievementList}>
-          {achievements.map((achievement, idx) => (
-            <li key={idx}>{achievement}</li>
+          {duties.map((duty, idx) => (
+            <li key={idx}>{duty}</li>
           ))}
         </ol>
       </div>
