@@ -28,5 +28,10 @@ export interface IExperience {
   endingDate: string;
   position: string;
   company: string;
-  task: string;
+  duties: string[];
+}
+
+export interface ILanguage {
+  name: string;
+  level: string;
 }

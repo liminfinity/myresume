@@ -2,13 +2,13 @@ import { Article } from '../../ui';
 import { Contact } from '../../components';
 import type { IContact } from '../../types';
 import { faCode, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
-import styles from './style.module.scss';
+import styles from './contacts.module.scss';
 import type { ContactsProps } from './contacts.types';
 
 const contacts: IContact[] = [
   {
     title: 'Город',
-    source: 'Краснояск',
+    source: 'Красноярск',
     icon: faLocationDot,
   },
   {
@@ -27,7 +27,7 @@ const contacts: IContact[] = [
     icon: faEnvelope,
   },
   {
-    title: 'Github',
+    title: 'Github (Портфолио)',
     source: 'https://github.com/liminfinity',
     icon: faCode,
   },

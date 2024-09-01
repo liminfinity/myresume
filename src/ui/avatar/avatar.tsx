@@ -1,6 +1,6 @@
 import { cn } from '../../lib';
 import type { AvatarProps } from './avatar.types';
-import styles from './style.module.scss';
+import styles from './avatar.module.scss';
 
 export const Avatar = ({ className, ...props }: AvatarProps) => {
   return (

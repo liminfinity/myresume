@@ -1,7 +1,7 @@
 import { cn } from '../../lib';
 import { Title } from '../../ui';
 import { EducationProps } from './education.types';
-import styles from './style.module.scss';
+import styles from './education.module.scss';
 
 export const Education = ({
   education,

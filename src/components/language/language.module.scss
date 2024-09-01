@@ -1,0 +1,8 @@
+@import '../../style/variables', '../../style/mixins';
+
+.container {
+  @include flex {
+    gap: 0.2rem;
+    justify-content: flex-start;
+  }
+}

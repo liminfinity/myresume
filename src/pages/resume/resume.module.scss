@@ -1,4 +1,4 @@
-@import '../style/variables', '../style/mixins';
+@import '../../style/variables', '../../style/mixins';
 
 .container {
   @include container;
@@ -57,9 +57,12 @@
     width: 100%;
   }
 }
-
-.footer {
+.languages {
+  width: 20rem;
+  padding: 2rem;
   background: #fff;
-  border-top-left-radius: map-get($radius, lg);
-  border-top-right-radius: map-get($radius, lg);
+  border-radius: map-get($radius, lg);
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 }

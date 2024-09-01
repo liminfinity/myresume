@@ -1,7 +1,7 @@
 import { cn, isSourceLink } from '../../lib';
 import { Title, Icon, Link } from '../../ui';
 import type { ContactProps } from './contact.types';
-import styles from './style.module.scss';
+import styles from './contact.module.scss';
 
 export const Contact = ({ contact, className, ...props }: ContactProps) => {
   const {icon, source, title} = contact;
