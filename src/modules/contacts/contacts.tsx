@@ -27,7 +27,7 @@ const contacts: IContact[] = [
     icon: faEnvelope,
   },
   {
-    title: 'Github',
+    title: 'Github (Портфолио)',
     source: 'https://github.com/liminfinity',
     icon: faCode,
   },
